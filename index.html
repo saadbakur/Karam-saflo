@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دعوة افتتاح سنتر تركواز</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700&display=swap">
+<style>
+:root{--ink:#0b1618;--plum:#12282a;--turquoise:#00a8a8;--turquoise-light:#4fe0e0;--paper:#eef6f6;--muted:#a3c4c4;--line:rgba(0,168,168,.28);--display:"Reem Kufi","Tajawal",system-ui,sans-serif;--body:"Tajawal",system-ui,sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--ink);color:var(--paper);font-family:var(--body);font-size:17px;line-height:1.7;direction:rtl;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+#dust,#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+#confetti{z-index:50}
+.page{position:relative;z-index:1;max-width:640px;margin:0 auto;padding-block:40px 56px;display:flex;flex-direction:column;gap:44px}
+.eyebrow{font-size:14px;letter-spacing:.18em;color:var(--turquoise-light)}
+h1,h2{font-family:var(--display);font-weight:700;margin:0;text-wrap:balance;line-height:1.2}
+h1{font-size:clamp(34px,9vw,56px);color:var(--turquoise-light)}
+h2{font-size:26px;color:var(--turquoise-light)}
+.head{text-align:center;display:flex;flex-direction:column;gap:10px;align-items:center}
+.head p{margin:0;color:var(--muted);max-width:38ch}
+.rule{width:72px;height:2px;background:linear-gradient(90deg,transparent,var(--turquoise),transparent);border:0;margin:6px 0}
+.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) backwards}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.stage-wrap{display:flex;flex-direction:column;align-items:center;gap:18px}
+.stage{position:relative;width:100%;height:340px;border-radius:6px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(ellipse at 50% 40%,#004d4d 0%,var(--plum) 70%)}
+.reveal{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;z-index:1}
+.reveal .big{font-family:var(--display);font-size:clamp(32px,8vw,48px);color:var(--turquoise-light);line-height:1.15}
+.reveal .glow{position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(79,224,224,.3),transparent 65%);animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.25);opacity:.6}}
+.curtain{position:absolute;top:0;bottom:0;width:50.5%;z-index:2;background:repeating-linear-gradient(90deg,#003333 0 16px,#004d4d 16px 32px,#002222 32px 50px);box-shadow:inset 0 -50px 60px rgba(0,0,0,.45);transition:transform 1.7s cubic-bezier(.7,0,.2,1)}
+.curtain.l{left:0}.curtain.r{right:0}
+.stage.open .curtain.l{transform:translateX(-102%)}
+.stage.open .curtain.r{transform:translateX(102%)}
+.rib{position:absolute;top:50%;height:30px;margin-top:-15px;width:50%;z-index:3;background:linear-gradient(var(--turquoise-light),var(--turquoise),#006666);box-shadow:0 3px 8px rgba(0,0,0,.45);transition:transform 1.1s ease-in,opacity 1.1s}
+.rib.l{left:0;transform-origin:left center}.rib.r{right:0;transform-origin:right center}
+.knot{position:absolute;top:50%;left:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;z-index:4;background:radial-gradient(circle at 35% 30%,var(--turquoise-light),var(--turquoise),#004444);box-shadow:0 4px 12px rgba(0,0,0,.5);transition:opacity .4s}
+.stage.cut .rib.l{transform:translateY(160px) rotate(24deg);opacity:0}
+.stage.cut .rib.r{transform:translateY(160px) rotate(-24deg);opacity:0}
+.stage.cut .knot{opacity:0}
+.btn{font-family:var(--display);font-size:20px;font-weight:700;border:0;cursor:pointer;background:linear-gradient(var(--turquoise-light),var(--turquoise));color:#0b1618;padding:13px 34px;border-radius:999px;box-shadow:0 6px 22px rgba(0,168,168,.35);transition:transform .2s;display:inline-block;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn[disabled]{opacity:.55;cursor:default;transform:none}
+.hint{color:var(--muted);font-size:15px;margin:0}
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cell{border:1px solid var(--line);border-radius:6px;padding:14px 4px 10px;text-align:center;background:rgba(18,40,42,.7)}
+.num{display:block;font-family:var(--display);font-size:clamp(32px,9vw,46px);color:var(--turquoise-light);line-height:1;font-variant-numeric:tabular-nums}
+.num.bump{animation:bump .45s}
+@keyframes bump{40%{transform:translateY(-6px) scale(1.12)}}
+.lbl{font-size:14px;color:var(--muted)}
+.count-title{text-align:center;margin:0 0 14px;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.fact{border-top:2px solid var(--turquoise);padding:12px 2px 0;min-width:0}
+.fact small{display:block;color:var(--turquoise-light);font-size:14px}
+.fact strong{display:block;font-family:var(--display);font-size:21px;font-weight:500;line-height:1.35}
+.fact span{color:var(--muted);font-size:15px}
+.action-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.ghost{font-family:var(--body);font-size:14px;background:transparent;color:var(--turquoise-light);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;text-decoration:none;display:inline-block}
+.counter-box{border:1px dashed var(--turquoise);border-radius:6px;padding:14px 18px;background:rgba(0,80,80,.2);display:flex;align-items:center;justify-content:space-between}
+.counter-box span{color:var(--muted)}
+.counter-box b{font-family:var(--display);font-size:22px;color:var(--turquoise-light)}
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:sweep 3.2s ease-in-out infinite}
+@keyframes sweep{60%,100%{left:130%}}
+.counter-box{animation:glow 2.8s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 22px rgba(79,224,224,.35)}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+.counter-box.rv{transition:opacity .8s,transform .8s}
+body:not(.ready) .rise{animation-play-state:paused}
+.ghost{transition:background .2s,transform .2s}
+.ghost:hover{background:rgba(0,168,168,.15);transform:translateY(-1px)}
+form{display:flex;flex-direction:column;gap:16px;margin-top:14px}
+label{display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:15px}
+input[type=text]{font:inherit;font-size:18px;color:var(--paper);background:rgba(238,246,246,.07);border:1px solid var(--line);border-radius:6px;padding:12px 14px;width:100%}
+.stepper{display:flex;align-items:center;gap:14px}
+.step{width:44px;height:44px;border-radius:50%;border:1px solid var(--turquoise);background:transparent;color:var(--turquoise-light);font-size:24px;cursor:pointer;line-height:1}
+.guests{font-family:var(--display);font-size:30px;min-width:2ch;text-align:center;color:var(--turquoise-light)}
+.done{border:1px solid var(--turquoise);border-radius:6px;padding:26px 20px;text-align:center;background:rgba(0,80,80,.3);display:flex;flex-direction:column;gap:6px;animation:rise .7s backwards}
+.done b{font-family:var(--display);font-size:26px;color:var(--turquoise-light)}
+.foot{text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;gap:12px;align-items:center}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}
+#intro{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.ic{position:absolute;top:0;bottom:0;width:50.5%;background:repeating-linear-gradient(90deg,#002b2b 0 18px,#005f5f 18px 36px,#001f1f 36px 56px);box-shadow:inset 0 -80px 90px rgba(0,0,0,.55),inset 0 80px 60px rgba(0,0,0,.4);transition:transform 2s cubic-bezier(.65,0,.2,1)}
+.ic.l{left:0}.ic.r{right:0}
+#intro.go .ic.l{transform:translateX(-103%)}
+#intro.go .ic.r{transform:translateX(103%)}
+.valance{position:absolute;top:0;left:0;right:0;height:46px;z-index:3;background:linear-gradient(#007a7a,#004444);border-bottom:3px solid #d9b46a;box-shadow:0 6px 18px rgba(0,0,0,.6);transition:transform 1.4s ease-in .5s,opacity 1.4s .5s}
+#intro.go .valance{transform:translateY(-60px);opacity:0}
+.icenter{position:relative;z-index:4;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;padding:0 24px;transition:opacity .6s,transform .8s}
+#intro.go .icenter{opacity:0;transform:scale(.9)}
+.icenter .seal{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;font-size:44px;background:radial-gradient(circle at 35% 30%,#4fe0e0,#00a8a8 60%,#004444);border:3px solid #d9b46a;box-shadow:0 0 0 8px rgba(217,180,106,.18),0 10px 30px rgba(0,0,0,.6);animation:float 2.6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.icenter small{color:#f1deaa;letter-spacing:.2em;font-size:15px}
+.icenter h2{font-size:clamp(30px,8vw,46px);color:#fff;text-shadow:0 3px 14px rgba(0,0,0,.7)}
+.icenter .tap{font-family:var(--display);font-size:19px;color:#0b1618;background:linear-gradient(#f1deaa,#d9b46a);padding:12px 30px;border-radius:999px;box-shadow:0 6px 22px rgba(217,180,106,.4);animation:pulse2 1.8s ease-in-out infinite}
+@keyframes pulse2{50%{transform:scale(1.07)}}
+h1{background:linear-gradient(90deg,#4fe0e0,#f1deaa,#4fe0e0);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:-200% 0}}
+.cell,.fact,.counter-box,.prog li{transition:transform .25s,border-color .25s}
+.cell:hover{transform:translateY(-3px);border-color:var(--turquoise-light)}
+</style>
+</head>
+<body>
+<div id="intro" role="button" tabindex="0" aria-label="افتح الدعوة">
+  <div class="ic l"></div><div class="ic r"></div><div class="valance"></div>
+  <div class="icenter">
+    <div class="seal">✉️</div>
+    <small>دعوة خاصة</small>
+    <h2>سنتر تركواز</h2>
+    <div class="tap">اضغط لفتح الدعوة</div>
+  </div>
+</div>
+<canvas id="dust" aria-hidden="true"></canvas>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<div class="page">
+  <header class="head">
+    <div class="eyebrow rise">دعوة خاصة وافتتاح رسمي</div>
+    <h1 class="rise">افتتاح سنتر تركواز</h1>
+    <hr class="rule rise">
+    <p class="rise">بإشراف المدير <b>كرم سفلو</b>، يسرنا تشريفكم لحضور حفل الافتتاح.</p>
+  </header>
+  <section class="stage-wrap" aria-label="قصّ الشريط">
+    <div class="stage" id="stage">
+      <div class="reveal"><div class="glow"></div><div class="big">أهلاً بكم جميعاً</div><div>الأحد ١٥ تشرين الثاني · ٦:٠٠ مساءً</div></div>
+      <div class="curtain l"></div><div class="curtain r"></div><div class="rib l"></div><div class="rib r"></div><div class="knot"></div>
+    </div>
+    <button class="btn" id="cut" type="button">قصّ الشريط وابدأ الاحتفال</button>
+    <p class="hint" id="hint">اضغط الزر لفتح الستارة والاحتفال</p>
+  </section>
+  <section>
+    <p class="count-title">يتبقّى على الافتتاح</p>
+    <div class="count" role="timer">
+      <div class="cell"><span class="num" id="d">٠٠</span><span class="lbl">يوم</span></div>
+      <div class="cell"><span class="num" id="h">٠٠</span><span class="lbl">ساعة</span></div>
+      <div class="cell"><span class="num" id="m">٠٠</span><span class="lbl">دقيقة</span></div>
+      <div class="cell"><span class="num" id="s">٠٠</span><span class="lbl">ثانية</span></div>
+    </div>
+  </section>
+  <div class="counter-box"><span>عدد الحضور المؤكدين حتى الآن:</span><b id="liveCounter">٠</b></div>
+  <section>
+    <div class="facts">
+      <div class="fact"><small>التاريخ والوقت</small><strong>الأحد ١٥ تشرين الثاني ٢٠٢٦</strong><span>الساعة ٦:٠٠ مساءً</span></div>
+      <div class="fact"><small>المشرف العام</small><strong>المدير كرم سفلو</strong></div>
+      <div class="fact">
+        <small>الموقع التفصيلي</small><strong>إدلب - شارع الثلاثين (قصور شعيب)</strong>
+        <div class="action-row">
+          <span id="addr">سنتر تركواز، إدلب، شارع الثلاثين، قصور شعيب</span>
+          <button class="ghost" id="copy" type="button">نسخ العنوان</button>
+          <a class="ghost" href="https://maps.app.goo.gl/XJdMa8svZfkRabsTA" target="_blank" rel="noopener">فتح الخريطة 📍</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>تأكيد الحضور (RSVP)</h2>
+    <div id="rsvpbox">
+      <form id="rsvp" novalidate>
+        <label for="name">الاسم الكريم<input id="name" type="text" autocomplete="name" placeholder="اكتب اسمك الثلاثي"></label>
+        <div>
+          <label for="gcount" style="margin-bottom:8px">عدد المرافقين</label>
+          <div class="stepper">
+            <button class="step" type="button" id="plus" aria-label="زيادة">+</button>
+            <output class="guests" id="gcount">١</output>
+            <button class="step" type="button" id="minus" aria-label="إنقاص">−</button>
+          </div>
+        </div>
+        <button class="btn" type="submit" style="align-self:flex-start">تأكيد الحضور</button>
+        <p class="hint" id="err" hidden style="color:var(--turquoise-light)">الرجاء كتابة الاسم أولاً.</p>
+      </form>
+    </div>
+  </section>
+  <footer class="foot">
+    <span>سنتر تركواز · بإشراف المدير كرم سفلو © ٢٠٢٦</span>
+    <a class="ghost" id="cal" href="#" target="_blank" rel="noopener">📅 إضافة الموعد إلى التقويم</a>
+    <button class="ghost" id="share" type="button">🔗 مشاركة الدعوة</button>
+  </footer>
+</div>
+<script>
+(function(){
+  var AR='٠١٢٣٤٥٦٧٨٩';
+  function ar(n,pad){var s=String(n);if(pad&&s.length<pad)s='0'+s;return s.replace(/\d/g,function(c){return AR[c]})}
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var dc=document.getElementById('dust'),dx=dc.getContext('2d'),dots=[],W=0,H=0;
+  function size(c){var r=window.devicePixelRatio||1;c.width=innerWidth*r;c.height=innerHeight*r;c.getContext('2d').setTransform(r,0,0,r,0,0);W=innerWidth;H=innerHeight}
+  size(dc);
+  for(var i=0;i<42;i++)dots.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.6,v:Math.random()*.35+.12,p:Math.random()*6});
+  function dust(t){
+    dx.clearRect(0,0,W,H);
+    dots.forEach(function(d){d.y-=d.v;d.x+=Math.sin(t/1800+d.p)*.25;if(d.y<-4){d.y=H+4;d.x=Math.random()*W}
+      dx.globalAlpha=.25+.35*Math.abs(Math.sin(t/1400+d.p));dx.fillStyle='#4fe0e0';dx.beginPath();dx.arc(d.x,d.y,d.r,0,6.283);dx.fill()});
+    requestAnimationFrame(dust);
+  }
+  if(!reduce)requestAnimationFrame(dust);
+  var cc=document.getElementById('confetti'),cx=cc.getContext('2d'),bits=[],running=false;
+  var cols=['#00a8a8','#4fe0e0','#eef6f6','#d9b46a','#006666'];
+  function burst(){
+    var w=innerWidth,h=innerHeight;
+    for(var i=0;i<150;i++){var side=i%2?1:-1;
+      bits.push({x:w/2+side*w*.1,y:h*.45,vx:(Math.random()*9+3)*side*(Math.random()>.5?1:.5),vy:-(Math.random()*13+5),w:Math.random()*8+5,h:Math.random()*5+3,a:Math.random()*6,va:(Math.random()-.5)*.3,c:cols[i%cols.length],life:0})}
+    if(!running){running=true;requestAnimationFrame(tick)}
+  }
+  function tick(){
+    cx.clearRect(0,0,innerWidth,innerHeight);
+    bits=bits.filter(function(b){return b.y<innerHeight+30&&b.life<260});
+    bits.forEach(function(b){b.life++;b.vy+=.28;b.vx*=.992;b.x+=b.vx;b.y+=b.vy;b.a+=b.va;
+      cx.save();cx.translate(b.x,b.y);cx.rotate(b.a);cx.fillStyle=b.c;cx.globalAlpha=Math.max(0,1-b.life/260);cx.fillRect(-b.w/2,-b.h/2,b.w,b.h);cx.restore()});
+    if(bits.length)requestAnimationFrame(tick);else{running=false;cx.clearRect(0,0,innerWidth,innerHeight)}
+  }
+  addEventListener('resize',function(){size(dc);size(cc)});size(cc);
+  var stage=document.getElementById('stage'),cut=document.getElementById('cut'),hint=document.getElementById('hint');
+  cut.addEventListener('click',function(){
+    cut.disabled=true;stage.classList.add('cut');
+    setTimeout(function(){stage.classList.add('open');if(!reduce)burst()},700);
+    setTimeout(function(){burst()},1500);
+    cut.textContent='تم الافتتاح بنجاح';
+    hint.textContent='أهلاً بكم في سنتر تركواز';
+  });
+  var target=new Date('2026-11-15T18:00:00+03:00').getTime();
+  var els={d:document.getElementById('d'),h:document.getElementById('h'),m:document.getElementById('m'),s:document.getElementById('s')};
+  function set(k,v){var t=ar(v,2);if(els[k].textContent!==t){els[k].textContent=t;els[k].classList.remove('bump');void els[k].offsetWidth;if(!reduce)els[k].classList.add('bump')}}
+  function loop(){var diff=Math.max(0,target-Date.now()),s=Math.floor(diff/1000);
+    set('d',Math.floor(s/86400));set('h',Math.floor(s%86400/3600));set('m',Math.floor(s%3600/60));set('s',s%60)}
+  loop();setInterval(loop,1000);
+  var copy=document.getElementById('copy'),addr=document.getElementById('addr');
+  copy.addEventListener('click',function(){
+    function ok(){copy.textContent='تم النسخ';setTimeout(function(){copy.textContent='نسخ العنوان'},1800)}
+    function fallback(){var r=document.createRange();r.selectNodeContents(addr);var s=getSelection();s.removeAllRanges();s.addRange(r);copy.textContent='حدّد العنوان وانسخه'}
+    try{navigator.clipboard.writeText(addr.textContent).then(ok,fallback)}catch(e){fallback()}
+  });
+  var n=1,gc=document.getElementById('gcount');
+  document.getElementById('plus').addEventListener('click',function(){n=Math.min(8,n+1);gc.textContent=ar(n)});
+  document.getElementById('minus').addEventListener('click',function(){n=Math.max(1,n-1);gc.textContent=ar(n)});
+  function chime(){try{var AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;var c=new AC(),t=c.currentTime;[523.25,659.25,783.99,1046.5].forEach(function(f,i){var o=c.createOscillator(),g=c.createGain(),s=t+i*.12;o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(0,s);g.gain.linearRampToValueAtTime(.18,s+.03);g.gain.exponentialRampToValueAtTime(.001,s+1.4);o.connect(g);g.connect(c.destination);o.start(s);o.stop(s+1.5)})}catch(e){}}
+  function pop(x,y){if(reduce)return;for(var i=0;i<12;i++){var a=Math.random()*6.283,s=Math.random()*4+2;bits.push({x:x,y:y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-2,w:4,h:4,a:0,va:.2,c:cols[i%cols.length],life:150})}if(!running){running=true;requestAnimationFrame(tick)}}
+  document.addEventListener('pointerdown',function(e){pop(e.clientX,e.clientY)});
+  try{if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});document.querySelectorAll('.page>section:not(.stage-wrap), .counter-box, .foot').forEach(function(el){el.classList.add('rv');io.observe(el)})}}catch(x){}
+  var cal=document.getElementById('cal');
+  cal.href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent('افتتاح سنتر تركواز - إدلب')+'&dates=20261115T150000Z/20261115T190000Z&details='+encodeURIComponent('حفل افتتاح سنتر تركواز بإشراف المدير كرم سفلو')+'&location='+encodeURIComponent('سنتر تركواز، إدلب، شارع الثلاثين، قصور شعيب');
+  var sh=document.getElementById('share');
+  sh.addEventListener('click',function(){
+    var data={title:'دعوة افتتاح سنتر تركواز',text:'أنتم مدعوون لافتتاح سنتر تركواز - الأحد ١٥ تشرين الثاني، ٦:٠٠ مساءً',url:location.href};
+    if(navigator.share){navigator.share(data).catch(function(){})}
+    else{try{navigator.clipboard.writeText(location.href).then(function(){sh.textContent='✓ تم نسخ الرابط';setTimeout(function(){sh.textContent='🔗 مشاركة الدعوة'},1800)})}catch(e){}}
+  });
+  setInterval(function(){if(Date.now()>=target){var t=document.querySelector('.count-title');if(t)t.textContent='🎉 بدأ حفل الافتتاح!'}},1000);
+  var intro=document.getElementById('intro');
+  intro.focus();
+  document.body.style.overflow='hidden';
+  function openIntro(){
+    if(intro.classList.contains('go'))return;
+    intro.classList.add('go');
+    chime();try{navigator.vibrate&&navigator.vibrate(60)}catch(e){}
+    setTimeout(function(){document.body.classList.add('ready');if(!reduce)burst()},900);
+    setTimeout(function(){burst()},1700);
+    setTimeout(function(){intro.remove();document.body.style.overflow=''},2300);
+  }
+  intro.addEventListener('click',openIntro);
+  intro.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' ')openIntro()});
+  var currentConfirmed=0,BASE=0,API='https://abacus.jasoncameron.dev',NS='turquoise-center-2026-11-15-4d60fef9',KEY='confirmed';
+  function show(){document.getElementById('liveCounter').textContent=ar(currentConfirmed);document.querySelector('.counter-box').style.display=currentConfirmed<1?'none':''}
+  show();
+  fetch(API+'/get/'+NS+'/'+KEY).then(function(r){return r.ok?r.json():{value:0}}).then(function(d){if(d&&typeof d.value==='number'){currentConfirmed=BASE+d.value;show()}}).catch(function(){});
+  document.getElementById('rsvp').addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('name').value.trim(),err=document.getElementById('err');
+    if(!name){err.hidden=false;document.getElementById('name').focus();return}
+    err.hidden=true;
+    if(!window.__rs){
+      currentConfirmed+=n;
+      try{localStorage.setItem('rsvp',JSON.stringify({name:name,n:n}))}catch(x){}
+      (function hit(i){if(i>=n)return;fetch(API+'/hit/'+NS+'/'+KEY).then(function(r){return r.json()}).then(function(d){if(d&&typeof d.value==='number'){currentConfirmed=BASE+d.value;show()}hit(i+1)}).catch(function(){})})(0);
+    }
+    show();
+    var box=document.getElementById('rsvpbox');box.innerHTML='';
+    var d=document.createElement('div');d.className='done';
+    var b=document.createElement('b');b.textContent='شكراً لك، '+name;
+    var p=document.createElement('span');p.textContent=(n===1?'تم حجز مقعد واحد':'تم حجز '+ar(n)+' مقاعد')+' لحضور افتتاح سنتر تركواز.';
+    var q=document.createElement('span');q.style.color='var(--muted)';q.textContent='بانتظار تشريفكم بكل سعادة.';
+    d.appendChild(b);d.appendChild(p);d.appendChild(q);box.appendChild(d);
+    if(!reduce&&!window.__rs)burst();
+  });
+  try{var sv=JSON.parse(localStorage.getItem('rsvp')||'null');if(sv&&sv.name){window.__rs=true;document.getElementById('name').value=sv.name;n=sv.n;gc.textContent=ar(n);document.getElementById('rsvp').dispatchEvent(new Event('submit',{cancelable:true}));window.__rs=false}}catch(x){}
+})();
+</script>
+</body>
+</html>
