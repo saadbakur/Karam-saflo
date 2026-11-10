@@ -1,2 +1,0 @@
-# Karam-saflo
-invitation 
